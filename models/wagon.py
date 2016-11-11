@@ -6,6 +6,7 @@ class Wagon(models.AbstractModel):
     _name = 'wagon'
 
     wagon = fields.Char()
+    order_num = fields.Char(string="Numero de pedido")
 
     zvp_id = fields.Many2one('zvp')
     zvp_partner = fields.Char(related="zvp_id.partner", readonly=True)
