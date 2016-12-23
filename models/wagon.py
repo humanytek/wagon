@@ -16,10 +16,10 @@ class Wagon(models.AbstractModel):
     seal_up_from = fields.Char()
     seal_up_to = fields.Char()
 
-    weight_1 = fields.Float()
-    weight_2 = fields.Float()
-    weight_3 = fields.Float()
-    weight_4 = fields.Float()
+    weight_1 = fields.Integer()
+    weight_2 = fields.Integer()
+    weight_3 = fields.Integer()
+    weight_4 = fields.Integer()
 
     @api.one
     @api.depends('weight_1', 'weight_2', 'weight_3', 'weight_4')
